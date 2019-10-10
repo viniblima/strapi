@@ -12,7 +12,7 @@ module.exports = {
         ctx.response.body = {
             data: data
         };
-        return ctx.response.body;
+        return data;
     },
 
     find:  (ctx) => {
@@ -21,6 +21,6 @@ module.exports = {
         ctx.response.body = {
             data: data
         };
-        return ctx.response.body;
+        return data;
     }
 };
