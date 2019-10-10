@@ -1,0 +1,18 @@
+{
+  "connection": "default",
+  "collectionName": "horas",
+  "info": {
+    "name": "hora",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "hora": {
+      "type": "string"
+    }
+  }
+}

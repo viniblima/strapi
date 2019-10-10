@@ -1,0 +1,18 @@
+{
+  "connection": "default",
+  "collectionName": "condominos",
+  "info": {
+    "name": "condomino",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "Nome": {
+      "type": "string"
+    }
+  }
+}

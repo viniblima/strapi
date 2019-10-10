@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/condominos",
+      "handler": "Condomino.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/condominos/count",
+      "handler": "Condomino.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/condominos/:id",
+      "handler": "Condomino.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/condominos",
+      "handler": "Condomino.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/condominos/:id",
+      "handler": "Condomino.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/condominos/:id",
+      "handler": "Condomino.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
