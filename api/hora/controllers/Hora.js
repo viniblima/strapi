@@ -9,18 +9,14 @@ module.exports = {
     create:  (ctx) => {
         var _ = require('moment');
         var data = _().unix();
-        ctx.response.body = {
-            data: data
-        };
-        return data;
+        ctx.response.body = data;
+        return ctx.response.body;
     },
 
     find:  (ctx) => {
         var _ = require('moment');
         var data = _().unix();
-        ctx.response.body = {
-            data: data
-        };
-        return data;
+        ctx.response.body = data;
+        return ctx.response.body;
     }
 };
