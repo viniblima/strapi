@@ -11,10 +11,7 @@ module.exports = {
         var data = _().unix();
 
         var calc = parseInt(data);
-        var dados = {
-            time1: data,
-            time2: (calc * 1000) - 10800000
-        }
+
         const query = await strapi.query('reserva').find(
             {
                 hora_inicio_lte: (calc * 1000) - 10800000,
@@ -24,8 +21,8 @@ module.exports = {
         var query2;
         if(query.length > 0){
             query2 = await strapi.services.multas.create({
-                condomino: query[0].condomino.id,
-                reserva: query[0].id
+                condomino: 1,
+                reserva: 1
             });
         }
 
