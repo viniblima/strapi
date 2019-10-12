@@ -6,10 +6,32 @@
  */
 
 module.exports = {
-    create:  (ctx) => {
+    create:  async (ctx) => {
         var _ = require('moment');
         var data = _().unix();
-        ctx.response.body = data;
+
+        var calc = parseInt(data);
+        var dados = {
+            time1: data,
+            time2: (calc * 1000) - 10800000
+        }
+        const query = await strapi.query('reserva').find(
+            {
+                hora_inicio_lte: (calc * 1000) - 10800000,
+                hora_final_gte: (calc * 1000) - 10800000
+            }
+        );
+        var query2;
+        if(query.length > 0){
+            query2 = await strapi.services.multas.create({
+                condomino: query[0].condomino.id,
+                reserva: query[0].id
+            });
+        }
+
+        
+        ctx.response.body = query2;
+
         return ctx.response.body;
     },
 

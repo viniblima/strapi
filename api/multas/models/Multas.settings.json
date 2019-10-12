@@ -1,0 +1,24 @@
+{
+  "connection": "default",
+  "collectionName": "multas",
+  "info": {
+    "name": "multas",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "condomino": {
+      "model": "condomino"
+    },
+    "reserva": {
+      "model": "reserva"
+    }
+  }
+}
