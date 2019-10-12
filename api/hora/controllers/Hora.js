@@ -21,8 +21,8 @@ module.exports = {
         var query2;
         if(query.length > 0){
             query2 = await strapi.services.multas.create({
-                condomino: 1,
-                reserva: 1
+                condomino: query[0].condomino.id,
+                reserva: query[0].id
             });
         }
 
